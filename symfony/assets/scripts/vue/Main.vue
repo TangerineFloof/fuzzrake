@@ -70,6 +70,7 @@
         </div>
 
         <div class="col-md-6 text-md-end">
+          <NsfwToggle />
           <input
             id="search-text-field"
             v-model="state.search.text"
@@ -94,6 +95,7 @@ import DataTable from "./main/table/DataTable.vue";
 import FiltersPopUp from "./main/filters/FiltersPopUp.vue";
 import MainState from "./main/MainState";
 import MessageBus, { getMessageBus } from "../main/MessageBus";
+import NsfwToggle from "./main/NsfwToggle.vue";
 import Static from "../Static";
 import UpdatesPopUp from "./main/UpdatesPopUp.vue";
 import { makerIdHashRegexp } from "../consts";
@@ -110,6 +112,7 @@ import { Options, Vue } from "vue-class-component";
     ColumnsController,
     DataTable,
     FiltersPopUp,
+    NsfwToggle,
     UpdatesPopUp,
   },
 })
