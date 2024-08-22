@@ -4,6 +4,11 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
+        <a class="navbar-logo" href="{{ path('main') }}">
+            <div class="get">get</div>
+            <div class="fursuit">fursu.it</div>
+        </a>
+
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 {% include '_menu_item.html.twig' with {'name': 'main', 'fa_icon': 'home', 'label': 'Home' } %}
