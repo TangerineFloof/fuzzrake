@@ -1,6 +1,43 @@
 {% from 'main/htmx/shared_macros.html.twig' import update_dialog_open_attrs %}
 {% from 'main/shared_macros.html.twig' import card_open_attrs %}
 
+<div id="artisans-table-count" class="small">
+      FOOO {{ creators|length }} out of {{ total_creators_count }} fursuit makers in the database.
+</div>
+
+<div class="maker">
+    <div class="preview"></div>
+    <div class="details">
+        <div class="name">Alpha Dogs</div>
+        <div class="info">Summary of data here. Click into this to go to their profile.</div>
+    </div>
+</div>
+
+<div class="maker">
+    <div class="preview"></div>
+    <div class="details">
+        <div class="name">Kigurumi Kagetsu</div>
+        <div class="info">Summary of data here. Click into this to go to their profile.</div>
+    </div>        
+</div>
+
+<div class="maker">
+    <div class="preview"></div>
+    <div class="details">
+        <div class="name">Furmony</div>
+        <div class="info">Summary of data here. Click into this to go to their profile.</div>
+    </div>        
+</div>
+
+<div class="maker">
+    <div class="preview"></div>
+    <div class="details">
+        <div class="name">Tomacat</div>
+        <div class="info">Summary of data here. Click into this to go to their profile.</div>
+    </div>        
+</div>
+
+
 {% for creator in creators %}
     {% set creator_idx = loop.index %}
     <tr {% if creator.makerId %}id="{{ creator.makerId }}"{% endif %} class="{{ html_classes({
@@ -164,7 +201,3 @@
         </td>
     </tr>
 {% endfor %}
-
-<p hx-swap-oob="true" id="artisans-table-count" class="small">
-    Displaying {{ creators|length }} out of {{ total_creators_count }} fursuit makers in the database.
-</p>
