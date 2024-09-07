@@ -1,7 +1,6 @@
 import "../../3rd-party/flag-icon-css/css/flag-icon.css";
 import "../../styles/main.scss";
 import AgeAndSfwConfig from "../class/AgeAndSfwConfig";
-import Checklist from "../main/Checklist";
 import ColumnsManager from "../main/ColumnsManager";
 import FiltersManager from "../main/FiltersManager";
 import { makerIdHashRegexp } from "../consts";
@@ -49,10 +48,6 @@ if (AgeAndSfwConfig.getInstance().getMakerMode()) {
     requireJQ("#creator-mode-parameter-field").val("1");
     requireJQ("#creator-mode-parameter-field").trigger("click");
   });
-} else {
-  (function setUpChecklist(): void {
-    new Checklist();
-  })();
 }
 
 (function setUpSpeciesFilter(): void {

@@ -4,12 +4,11 @@
 
 <input type="hidden" id="creator-mode-parameter-field" name="creatorMode" value="0">
 
-<div hx-trigger="click from:#checklist-dismiss-btn,
+<div hx-trigger="load,
     hidden.bs.modal from:#filters-modal,
     input from:#search-text-field changed delay:500ms,
     click from:#creator-mode-parameter-field"
 
-    hx-on::before-request="jQuery('#checklist-container').addClass('d-none');"
     hx-on::after-request="jQuery('#main-primary-content').removeClass('d-none');"
 
     hx-include="#checklist-container, #filters-modal-body, #search-text-field, #creator-mode-parameter-field"
